@@ -3,6 +3,7 @@ package com.example.agripool;
 import android.location.Address;
 import android.location.Geocoder;
 import android.location.Location;
+import android.location.LocationManager;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -13,6 +14,8 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.gms.location.FusedLocationProviderClient;
+import com.google.android.gms.location.LocationServices;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -71,6 +74,7 @@ public class MapsDriverActivity extends AppCompatActivity implements OnMapReadyC
 
     private Button button;
     private Button search;
+    private double latitude,longitude;
     private MapView mapView;
     private MapboxMap map;
     private PermissionsManager permissionsManager;
@@ -94,8 +98,11 @@ public class MapsDriverActivity extends AppCompatActivity implements OnMapReadyC
         search = findViewById(R.id.startButton);
         mapView.onCreate(savedInstanceState);
         mapView.getMapAsync(this);
-        Geocoder geocoder = new Geocoder(this);
-        List<Address> addressList = null;
+
+        latitude = getIntent().getDoubleExtra("lat",0.0);
+        longitude = getIntent().getDoubleExtra("lng",0.0);
+
+
 
         final DatabaseReference mydb = FirebaseDatabase.getInstance().getReference("Orders");
 
@@ -169,7 +176,10 @@ public class MapsDriverActivity extends AppCompatActivity implements OnMapReadyC
         locationEngine.setPriority(LocationEnginePriority.HIGH_ACCURACY);
         locationEngine.activate();
 
-        Location lastLocation = locationEngine.getLastLocation();
+        //Location lastLocation = locationEngine.getLastLocation();
+        Location lastLocation = new Location(LocationManager.NETWORK_PROVIDER);
+        lastLocation.setLatitude(latitude);
+        lastLocation.setLongitude(longitude);
         if(lastLocation != null) {
             originLocation = lastLocation;
             setCameraPosition(lastLocation);
@@ -202,7 +212,8 @@ public class MapsDriverActivity extends AppCompatActivity implements OnMapReadyC
         destinationMarker = map.addMarker(new MarkerOptions().position(point));
 
         destinationPosition = Point.fromLngLat(point.getLongitude(), point.getLatitude());
-        originPosition = Point.fromLngLat(originLocation.getLongitude(), originLocation.getLatitude());
+        //originPosition = Point.fromLngLat(originLocation.getLongitude(), originLocation.getLatitude());
+        originPosition = Point.fromLngLat(longitude, latitude);
         getRoute(originPosition, destinationPosition);
 
         button.setEnabled(true);
@@ -214,7 +225,7 @@ public class MapsDriverActivity extends AppCompatActivity implements OnMapReadyC
 
         destinationMarker = map.addMarker(new MarkerOptions().position(point));
         destinationPosition = Point.fromLngLat(point.getLongitude(), point.getLatitude());
-        originPosition = Point.fromLngLat(originLocation.getLongitude(), originLocation.getLatitude());
+        originPosition = Point.fromLngLat(longitude, latitude);
         //getRoute(originPosition, destinationPosition);
 
         button.setEnabled(true);

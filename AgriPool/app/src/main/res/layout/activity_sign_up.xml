@@ -4,11 +4,11 @@
     android:layout_height="match_parent"
     android:background="@drawable/loginbg">
 
-    <include layout="@layout/toolbar"
-        android:id="@+id/toolbar"/>
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+<!--    <include layout="@layout/toolbar"-->
+<!--        android:id="@+id/toolbar"/>-->
+<!--    <RelativeLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent">-->
 
         <TextView
             android:id="@+id/title"
@@ -27,7 +27,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/title"
-            android:layout_alignStart="@+id/email"
+            android:layout_alignStart="@+id/name"
             android:fontFamily="@font/sketchy"
             android:text="SignUp"
             android:textColor="@color/black"
@@ -149,7 +149,7 @@
             style="@style/textviewLinks"
             android:text="Already Registered? Login" />
 
-    </RelativeLayout>
+<!--    </RelativeLayout>-->
 
 
 </RelativeLayout>

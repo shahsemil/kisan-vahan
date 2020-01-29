@@ -40,9 +40,9 @@ public class MainActivity extends AppCompatActivity {
 
         mAuth = FirebaseAuth.getInstance();
 
-        toolbar = (Toolbar) findViewById(R.id.toolbar);
-        toolbar.setTitle("Log In");
-        setSupportActionBar(toolbar);
+//        toolbar = (Toolbar) findViewById(R.id.toolbar);
+//        toolbar.setTitle("Log In");
+//        setSupportActionBar(toolbar);
 
         uname = (EditText) findViewById(R.id.uid);
         submit = (Button) findViewById(R.id.submit);

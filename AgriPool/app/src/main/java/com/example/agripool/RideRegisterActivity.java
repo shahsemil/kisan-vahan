@@ -31,6 +31,7 @@ import java.util.List;
 public class RideRegisterActivity extends AppCompatActivity {
 
     private Button btn;
+    private Button clr;
     private static final String TAG ="Transport_details";
     private DatePickerDialog.OnDateSetListener date;
     private EditText startdate,dest,src,cap;
@@ -42,6 +43,7 @@ public class RideRegisterActivity extends AppCompatActivity {
         setContentView(R.layout.activity_ride_register);
 
         btn = (Button)findViewById(R.id.submt);
+        clr = (Button)findViewById(R.id.clr);
         //dest = (EditText) findViewById(R.id.destin);
         src = (EditText) findViewById(R.id.stsrc);
         cap = (EditText) findViewById(R.id.capacity);
@@ -71,6 +73,14 @@ public class RideRegisterActivity extends AppCompatActivity {
                 startdate.setText(date11);
             }
         };
+        clr.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startdate.setText("");
+                src.setText("");
+                cap.setText("");
+            }
+        });
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

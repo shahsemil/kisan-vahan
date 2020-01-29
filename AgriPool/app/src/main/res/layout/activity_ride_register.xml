@@ -7,112 +7,139 @@
     tools:context=".RideRegisterActivity">
 
 
-    <TextView
-        android:id="@+id/editText5"
-        android:layout_width="159dp"
-        android:layout_height="46dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="245dp"
-        android:layout_marginBottom="417dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Capacity"
-        android:textAlignment="center"
-        android:textSize="18sp"
-        android:textStyle="bold" />
+    <include layout="@layout/toolbar"
+        android:id="@+id/toolbar"/>
 
     <TextView
-        android:id="@+id/editText2"
-        android:layout_width="139dp"
-        android:layout_height="45dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="260dp"
-        android:layout_marginBottom="577dp"
-        android:ems="10"
-        android:inputType="textPersonName"
+        android:id="@+id/label1"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_centerHorizontal="true"
+
+        android:layout_marginTop="100dp"
+
         android:text="Start Date"
         android:textAlignment="center"
         android:textSize="18sp"
         android:textStyle="bold" />
-
-    <EditText
-        android:id="@+id/capacity"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="30dp"
-        android:layout_marginBottom="418dp"
-        android:ems="10"
-        android:inputType="textPostalAddress" />
-
-    <EditText
-        android:id="@+id/stsrc"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="28dp"
-        android:layout_marginBottom="491dp"
-        android:ems="10"
-        android:inputType="textPostalAddress" />
-
     <EditText
         android:id="@+id/start"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="29dp"
-        android:layout_marginBottom="590dp"
-        android:ems="10"
-        android:inputType="textPostalAddress" />
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/label1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/edit_round"
+
+        android:drawablePadding="10dp"
+        android:hint="Enter start date"
+        android:inputType="textEmailAddress"
+        android:paddingLeft="10dp" />
 
     <TextView
-        android:id="@+id/editText3"
-        android:layout_width="139dp"
-        android:layout_height="45dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="257dp"
-        android:layout_marginBottom="492dp"
-        android:ems="10"
-        android:inputType="textPersonName"
+        android:id="@+id/label2"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/start"
+
+        android:layout_centerHorizontal="true"
+
+        android:layout_marginTop="10dp"
+
         android:text="Start Location"
         android:textAlignment="center"
         android:textSize="18sp"
         android:textStyle="bold" />
 
+    <EditText
+        android:id="@+id/stsrc"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/label2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/edit_round"
+
+        android:drawablePadding="10dp"
+        android:hint="Enter start location"
+        android:inputType="textEmailAddress"
+        android:paddingLeft="10dp"/>
+
+    <TextView
+        android:id="@+id/label3"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/stsrc"
+
+        android:layout_centerHorizontal="true"
+
+        android:layout_marginTop="10dp"
+
+        android:text="Capacity"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+
+    <EditText
+        android:id="@+id/capacity"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/label3"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/edit_round"
+
+        android:drawablePadding="10dp"
+        android:hint="Capacity in KG"
+        android:inputType="text"
+        android:paddingLeft="10dp" />
+
     <Button
         android:id="@+id/submt"
-        android:layout_width="137dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="50dp"
-        android:layout_marginBottom="127dp"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:layout_centerHorizontal="true"
+        android:paddingLeft="10dp"
+        android:paddingRight="30dp"
+        android:drawableLeft="@drawable/send"
+        android:layout_below="@id/clr"
+        android:textAllCaps="true"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+
+        android:textColor="#ffffff"
+        android:background="@drawable/bg"
         android:text="Submit" />
 
     <Button
-        android:id="@+id/button"
-        android:layout_width="137dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="237dp"
-        android:layout_marginBottom="128dp"
+        android:id="@+id/clr"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:layout_centerHorizontal="true"
+        android:paddingLeft="10dp"
+        android:paddingRight="30dp"
+        android:drawableLeft="@drawable/send"
+        android:layout_below="@id/checkBox"
+        android:textAllCaps="true"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+
+        android:textColor="#ffffff"
+        android:background="@drawable/bg"
         android:text="Clear" />
 
     <CheckBox
         android:id="@+id/checkBox"
         android:layout_width="274dp"
         android:layout_height="70dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
+
+
+        android:layout_below="@+id/capacity"
+        android:layout_marginTop="25dp"
+        android:layout_centerHorizontal="true"
+
         android:layout_marginEnd="73dp"
-        android:layout_marginBottom="228dp"
         android:textSize="20sp"
         android:textStyle="bold"
         android:textAlignment="center"

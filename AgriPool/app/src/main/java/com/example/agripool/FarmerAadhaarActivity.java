@@ -38,10 +38,16 @@ public class FarmerAadhaarActivity extends AppCompatActivity {
                 mDatabase.addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                        mDatabase.child("Farmer").child(unm).child("aadhaar").setValue(num);
-                        Intent intent = new Intent(getApplicationContext(),MainActivity.class);
-                        startActivity(intent);
-                        Toast.makeText(getApplicationContext(), "Registered Successfully", Toast.LENGTH_SHORT).show();
+                        try {
+                            if(num.length()>11) {
+                                mDatabase.child("Farmer").child(unm).child("aadhaar").setValue(num);
+                                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                                startActivity(intent);
+                                Toast.makeText(getApplicationContext(), "Registered Successfully", Toast.LENGTH_SHORT).show();
+                            }
+                        } catch(Exception e) {
+                            e.printStackTrace();
+                        }
                     }
 
                     @Override

@@ -41,12 +41,19 @@ public class DriverAadhaarActivity extends AppCompatActivity {
                 mDatabase.addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                        mDatabase.child("Driver").child(unm).child("aadhaar").setValue(num);
-                        mDatabase.child("Driver").child(unm).child("dlic").setValue(dlnum);
+                        try {
+                            if(num.length()>11 && dlnum.length()>12) {
+                                mDatabase.child("Driver").child(unm).child("aadhaar").setValue(num);
+                                mDatabase.child("Driver").child(unm).child("dlic").setValue(dlnum);
 
-                        Intent intent = new Intent(getApplicationContext(),MainActivity.class);
-                        startActivity(intent);
-                        Toast.makeText(getApplicationContext(), "Registered Successfully", Toast.LENGTH_SHORT).show();
+                                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                                startActivity(intent);
+                                Toast.makeText(getApplicationContext(), "Registered Successfully", Toast.LENGTH_SHORT).show();
+                            }
+                        }
+                        catch(Exception e) {
+                            e.printStackTrace();
+                        }
                     }
 
                     @Override

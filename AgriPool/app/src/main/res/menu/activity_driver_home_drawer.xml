@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <!--<item-->
+            <!--android:id="@+id/crop"-->
+            <!--android:icon="@drawable/plus"-->
+            <!--android:title="Add Crop" />-->
+        <item
+            android:id="@+id/hist"
+            android:icon="@drawable/ic_visited"
+            android:title="Your History" />
+
+        <item
+            android:id="@+id/acct"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="Change account details" />
+    </group>
+
+    <item android:title="User Settings">
+        <menu>
+            <item
+                android:id="@+id/HelpSupport"
+                android:title="Help &amp; Support"
+                android:icon="@drawable/ic_help_support"/>
+            <item
+                android:id="@+id/Logout"
+                android:title="Logout"
+                android:icon="@drawable/ic_logout"/>
+        </menu>
+    </item>
+
+</menu>

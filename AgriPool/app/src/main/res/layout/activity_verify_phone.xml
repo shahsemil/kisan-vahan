@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/loginbg"
+    tools:context=".VerifyPhone">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="129dp"
+        android:text="You will receive a code shortly"
+        android:textSize="25dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        />
+
+    <ProgressBar
+        android:visibility="gone"
+        android:id="@+id/progressbar"
+        android:layout_below="@id/editTextCode"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/editTextCode"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="189dp"
+        android:background="@drawable/edit_round"
+
+        android:drawableLeft="@drawable/user"
+        android:drawablePadding="10dp"
+        android:hint="Enter verification code"
+        android:inputType="textEmailAddress"
+        android:paddingLeft="10dp" />
+
+    <Button
+        android:id="@+id/buttonSignIn"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:layout_centerHorizontal="true"
+        android:paddingLeft="10dp"
+        android:paddingRight="30dp"
+        android:drawableLeft="@drawable/send"
+        android:layout_below="@id/editTextCode"
+        android:text="Login"
+        android:textAllCaps="true"
+        android:textStyle="bold"
+        android:layout_marginTop="150dp"
+
+        android:textColor="#ffffff"
+        android:background="@drawable/bg" />
+</RelativeLayout>

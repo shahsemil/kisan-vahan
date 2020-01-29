@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/Home"
+        android:title="Home"
+        android:icon="@drawable/ic_home"/>
+    <item
+        android:id="@+id/Bookmarks"
+        android:title="Bookmarks"
+        android:icon="@drawable/ic_round_bookmarks_24px"/>
+    <item
+        android:id="@+id/gmaps"
+        android:title="Nearby Colleges"
+        android:icon="@drawable/ic_visited"/>
+    <item
+        android:id="@+id/ChangePassword"
+        android:title="Change Password"
+        android:icon="@drawable/ic_chgpass"/>
+    <item
+        android:id="@+id/HelpSupport"
+        android:title="Help &amp; Support"
+        android:icon="@drawable/ic_help_support"/>
+    <item
+        android:id="@+id/Feedback"
+        android:title="Feedback"
+        android:icon="@drawable/ic_feedback"/>
+    <item
+        android:id="@+id/Logout"
+        android:title="Logout"
+        android:icon="@drawable/ic_logout"/>
+
+</menu>

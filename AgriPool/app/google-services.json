@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "125443732205",
+    "firebase_url": "https://agripool-1ad28.firebaseio.com",
+    "project_id": "agripool-1ad28",
+    "storage_bucket": "agripool-1ad28.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:125443732205:android:81c21c1a7e6a929c9112e4",
+        "android_client_info": {
+          "package_name": "com.example.agripool"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "125443732205-ervklbh2r76a4emiaes991c20koq33pf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.agripool",
+            "certificate_hash": "649c2a4661e00dde75a980996453693d6b3427ed"
+          }
+        },
+        {
+          "client_id": "125443732205-j782fcehu2l09sc3am3skm04pdcl6ujg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD5Ph2RONnmSZE8lCLBXsiEigOAEDoQTII"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "125443732205-j782fcehu2l09sc3am3skm04pdcl6ujg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

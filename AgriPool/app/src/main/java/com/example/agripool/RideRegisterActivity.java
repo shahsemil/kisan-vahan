@@ -104,6 +104,10 @@ public class RideRegisterActivity extends AppCompatActivity {
                            // mdb.child(Common.user_name).child("rides").child("dest_lng").setValue(dlng);
                             mdb.child(Common.user_name).child("rides").child("capacity").setValue(capp);
 
+                            Intent intent = new Intent(getApplicationContext(),MapsDriverActivity.class);
+                            intent.putExtra("lat",lat);
+                            intent.putExtra("lng",lng);
+                            startActivity(intent);
                         }
 
                         @Override
@@ -112,14 +116,14 @@ public class RideRegisterActivity extends AppCompatActivity {
                             Toast.makeText(getApplicationContext(), e, Toast.LENGTH_SHORT).show();
                         }
                     });
+
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
 
 
 
-                Intent intent = new Intent(getApplicationContext(),MapsDriverActivity.class);
-                startActivity(intent);
+
             }
         });
     }

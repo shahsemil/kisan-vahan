@@ -131,6 +131,7 @@ public class BookNowActivity extends AppCompatActivity {
                 final String cooling;
                 final double lat,dlat;
                 final double lng,dlng;
+                final double price;
                 checkBox = (CheckBox) findViewById(R.id.checkBox);
 
 
@@ -162,6 +163,17 @@ public class BookNowActivity extends AppCompatActivity {
                     cooling = "yes";
                 }else {
                     cooling = "no";
+                }
+                
+                // Price computation
+                if(cooling == "yes" && Integer.parseInt(quant) < 100) {
+                    price = 70 * Integer.parseInt(quant);
+                } else if(cooling == "no" && Integer.parseInt(quant) < 100) {
+                    price = 50 * Integer.parseInt(quant);
+                } else if(cooling == "yes" && Integer.parseInt(quant) > 100) {
+                    price = 80 * Integer.parseInt(quant);
+                } else {
+                    price = 60 * Integer.parseInt(quant);
                 }
 
                 Geocoder geocoder = new Geocoder(getApplicationContext());

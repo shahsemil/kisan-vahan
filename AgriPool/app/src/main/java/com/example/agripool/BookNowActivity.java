@@ -107,14 +107,11 @@ public class BookNowActivity extends AppCompatActivity {
 
             }
         });
-        date1 = new DatePickerDialog.OnDateSetListener() {
-            @Override
-            public void onDateSet(DatePicker datePicker, int year, int month, int day) {
-                month=month+1;
-                Log.d(TAG, "onDateSet: mm/dd/yyy: " +month+"/"+day+"/"+year);
-                String date12 =day+"/"+month+"/"+year;
-                deadline.setText(date12);
-            }
+        date1 = (datePicker, year, month, day) -> {
+            month=month+1;
+            Log.d(TAG, "onDateSet: mm/dd/yyy: " +month+"/"+day+"/"+year);
+            String date12 =day+"/"+month+"/"+year;
+            deadline.setText(date12);
         };
 
         book = (Button) findViewById(R.id.book);

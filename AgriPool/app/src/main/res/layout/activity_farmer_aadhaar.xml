@@ -30,7 +30,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="40dp"
         android:background="@drawable/edit_round"
-
+        android:maxLength="12"
         android:drawableLeft="@drawable/user"
         android:drawablePadding="10dp"
         android:hint="Enter your Aadhaar Number"

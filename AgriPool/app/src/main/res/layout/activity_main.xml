@@ -8,8 +8,8 @@ android:background="@drawable/loginbg"
 tools:context=".MainActivity">
 
 
-    <include layout="@layout/toolbar"
-        android:id="@+id/toolbar"/>
+<!--    <include layout="@layout/toolbar"-->
+<!--        android:id="@+id/toolbar"/>-->
 
 <TextView
     android:id="@+id/title"
